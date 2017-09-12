@@ -197,14 +197,15 @@ hr {
 }
 #about img {
 	border-radius: 50%;
-	width: 200px;
-	height: 200px;
+	width: 30%;
+	height: 30%;
 	display: inline-block;
 }
 #about p {
 	margin-top: 20px;
 	margin-bottom: 30px;
 	font-size: 20px;
+	color: #000000;
 }
 /* Skills Section */
 #skills {
@@ -212,7 +213,7 @@ hr {
 	background: #7bc3d1;
 }
 #skills h2 {
-	color: #fff;
+	color: #000000;
 }
 #skills hr {
 	background: rgba(255,255,255,0.3);
