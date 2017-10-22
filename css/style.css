@@ -3,8 +3,8 @@ body, html {
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #656c6d;
-	width: 100% !important;
-	height: 100% !important;
+	width: auto !important;
+	height: auto !important;
 }
 h1 {
 	font-weight: 700;
