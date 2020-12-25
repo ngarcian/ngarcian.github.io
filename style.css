@@ -1,12 +1,34 @@
-.leftSide, .rightSide, .leftSide3 .wallsSide, .niallSide{
+.leftSide, .rightSide, .leftSide3, .wallsSide, .niallSide{
   height: 100vh;
   width: 100%;
+
+
 }
 
+.smSide {
+  height: 100vh;
+  width: 100%;
+  border: 20px solid #FDEBFF;
+}
+
+.introSide
+{
+  height: 100vh;
+  width: 100%;
+  background-color: #ffdcb8;
+
+}
+
+.imageIntroSide{
+  height: 100vh;
+  width: 100%;
+background-color: #ffdcb8;
+}
 
 .leftSide2, .rightSide2 {
    height: 178vh;
   width: 100%;
+  
 }
 
 .lastSide {
@@ -29,7 +51,7 @@ background-color: #ebf9ff;
   margin-right: 100%;
   height: 100vh;
   width: 100%;
-  background-color: #e6ffec;
+  border: 20px solid #FDEBFF;
 
 }
 
@@ -132,11 +154,10 @@ font-family: 'Manrope', sans-serif;
   
 }
 .fix{
-    display: block;
-    position:absolute;
-    margin-left:auto;
-    margin-right: auto;
-    bottom:0px;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+    margin-top:10%;
     
 }
 
