@@ -1,304 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title> Nicole Garcia </title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="style.css" rel ="stylesheet">
-  <style>
-@import url('https://fonts.googleapis.com/css?family=Manrope&display=swap');
-</style>
-<link href="https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nicole Garcia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-
-<div class="row no-gutters">
-  <div class = "col-md-6 no-gutters">
-    <div class = "introSide">
-      <div class ="bio">
-        Hi, my name is Nicole Garcia and I'm a <b style="font-size:30px"> content creator</b>. I like to <b style="font-size:30px">create videos</b> and I'm learning how to <b style="font-size:30px">design graphics</b>.
-        I'm self-taught and I learned mostly from running LouiesforLouis and NiallTourNews on <b style="font-size:30px">social media</b>.
-        I've <b style="font-size:30px">interned at consumer-facing brands</b> and would love to continue doing so. <br></br>(Fun fact, I was voted one of the funniest people at my school! You can read my interview <a href="https://magazine.bcheights.com/index.php/2019/five-funniest/" style ="color:black"> here</a>.)  
-        <br>
-        <br>
-        <b style="font-size:15px">Download my resume.</b>
-        <br>
-        <a href="resume.pdf" download>
-        <img src="resume.png" alt="W3Schools" width="55" height="60">
-        </a>
-      </div>
+   
+    
+    <header id="header" class="animated slideInDown">
+        <table>
+            <tr>
+                <td id="logo">Nicole Garcia</td>
+                <td id="navigation">
+                    <a href="#work">experience</a>
+                    <a href="#bio">about</a>
+                    <a href="#contact">contact</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft">
+                <h1>Current undergraduate student at Boston College studying film and marketing. I have continuously worked in the entertainment industry and am now exploring journalism. I value storytelling and promoting meaningful connections.  </h1>
+                <button class="btn_one">Resume</button><br>
+                <a href="images/resume.pdf" class="button" download><i class="fa fa-download"></i>Download CV</a>
+                <table>
+                    <tr>
+                        <td class="animated zoomIn" style="animation-delay:.5s;"><a class="social"><i class="fab fa-youtube"></i></a></td>
+                    </tr>
+                </table>
+            </td>
+            <td id="rightImage" class="animated zoomIn" style="animation-delay:.3s;"></td>
+        </tr>
+    </table>
+    <div id="work">
+        <h1>Experience</h1>
+        <div id="photos">
+            <img onclick="magnify($(this).attr('src'))" src="images/wbd.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="images/cnn.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="images/PRDoc.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="images/nbcu.png">
+            <img onclick="magnify($(this).attr('src'))" src="images/universalkids.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="images/bravo.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="images/oxygen.png">
+            <img onclick="magnify($(this).attr('src'))" src="images/kund.png">
+            <img onclick="magnify($(this).attr('src'))" src="images/178.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="images/amc.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="images/wnyc.png">
+        </div>
     </div>
-  </div>
-
-  <div class = "col-md-6 no-gutters">
-    <div class = "imageIntroSide">
-      <img src="meintro.png" class = "fix" width="100%" height="100%">
+    <div id="bio">
+        <h1>about</h1>
+        <p> From Web Design to Post-Production, I have always been a creative. I am self-taught in Premiere Pro and learned the basics of After Effects and Photoshop. Video is my go-to medium of choice and I've always used videos as a way to express myself. Check out more on my YouTube Channel, Vimeo, and TikTok for more!
+        </p>
+        <p>
+            I've also had prior experiences managing social media accounts on Twitter. I'd like to learn how to apply these skills in a professional role to share important stories. 
+        </p>
+        <p>
+            I am a huge dog-lover excited to own my dog one day and my favorite food is sushi!
+        </p>
     </div>
-  </div>
-</div>
+    <div id="contact">
+        <h1>contact</h1>
+           
+                        <div id="inner_div">
+                            <table id="inner_table">
+                                <tr>
+                                    <td><i class="fas fa-phone"></i> &nbsp; +1 347 551 3484</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-at"></i> &nbsp; ngarcian02@gmail.com</td>
+                                </tr>
+                                 <tr>
+                                    <td><i class="fab fa-linkedin-in"></i> &nbsp;<a href="https://www.linkedin.com/in/nicolegarcia1" style="text-decoration:none;color:black"> LinkedIn</a> <td>
+                                </tr>
+                            
+                            </table>
+                        </div>
+                    
 
-
-
-<div class="row no-gutters">
-  <div class = "col-md-6 no-gutters">
-    <div class = "leftSide2">
-      
-      <br></br>
-      <br></br>
-
-      <div class="row no-gutters">
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ngarcian/video/6821535654900501766" data-video-id="6821535654900501766" > <section> <a target="_blank" title="@ngarcian" href="https://www.tiktok.com/@ngarcian">@ngarcian</a> <p>it’s getting warmer <a title="onecommunity" target="_blank" href="https://www.tiktok.com/tag/onecommunity">##onecommunity</a> <a title="edit" target="_blank" href="https://www.tiktok.com/tag/edit">##edit</a> <a title="dog" target="_blank" href="https://www.tiktok.com/tag/dog">##dog</a> <a title="goldenretriever" target="_blank" href="https://www.tiktok.com/tag/goldenretriever">##goldenretriever</a></p> <a target="_blank" title="♬ original sound - ngarcian" href="https://www.tiktok.com/music/original-sound-6821535628686101253">♬ original sound - ngarcian</a> </section> </blockquote><script async src="https://www.tiktok.com/embed.js"></script>
+        
     </div>
-  </div>
-  </div>
-
-  <div class = "col-md-6 no-gutters">
-    <div class = "rightSide2">
-      <div class ="videoText">
-        I am self-taught in Premiere Pro, After Effects, Photoshop, and Final Cut Pro. Video is my go-to medium of choice and I've always used videos as a way to express myself.
-        <br></br> Check out more on my <a href="https://www.youtube.com/channel/UC8LklmYDukynzXjqGeKiWhQ?view_as=subscriber" style ="color: #390094"> YouTube Channel</a>, <a href="https://vimeo.com/user129727741" style ="color: #390094"> Vimeo, </a> and <a href="https://www.tiktok.com/@ngarcian?" style ="color: #390094"> TikTok </a> for more!
-      </div>
-      <br></br>
-        <iframe width="99%" height="315" src="https://www.youtube.com/embed/vhpmllmtFW8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="99%" height="315" src="https://www.youtube.com/embed/p9O4fGl_rQY"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="99%" height="315" src="https://www.youtube.com/embed/BSP_S88i5EI"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div id="footer">
+      <br> <a href="https://imfunniee.github.io">Website Credit</a>
     </div>
-</div>
-</div>
-
-
-<br></br>
-<br></br>
-<br></br>
-
-
-
-<div class="row no-gutters">
-  <div class = "col-md-6 no-gutters">
-    <div class="rightSide">
-        <div class ="amcText">
-            INTERNSHIP EXPERIENCES
-          <div class ="imageCenter">
-            <br></br>
-                  <img style="width:50%; height:50%;" src="amc.png">
-                  <br></br>
-                  <img style="width:50%; height:50%;" src="wnyc.png">
-                      <br></br>
-                  <img style="width:50%; height:50%;" src="oath.png">
-             
-                 <br></br>
-                  <img style="width:40%; height:40%;" src="gwcpic.png">
-             </div>
-      </div>
-    </div>
-</div>
-
-  <div class = "col-md-6 no-gutters">
-    <div class = "rightSide5">
-      <br></br>
-      <div class ="amcText">
-
-        A group of interns and I worked on the "Next Big Idea" for AMC Networks. I learned how to create a logo and what to avoid in making one.
-        <br></br>
-        <iframe width="442" height="315" src="https://www.youtube.com/embed/lqtJ78zkM9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      
-      
-  </div>
-  </div>
-</div>
-<div class="row no-gutters">
-  <div class = "col-md-6 no-gutters">
-    <div class="rightSide5">
-        <img style="width:65%; height:100%;margin-left: 20%;" src="amc4.jpg">
-    </div>
-
-</div>
-
-  <div class = "col-md-6 no-gutters">
-    <div class = "rightSide5">
-      <img style="width:65%; height:100%;margin-left: 20%;" src="aol2.jpeg">
-      
-      
-  </div>
-  </div>
-</div>
-
-<div class="row no-gutters">
-  <div class = "col-md-6 no-gutters">
-    <div class="rightSide">
-      <div class ="socialText">
-        SOCIAL MEDIA
-      </div>
-    </div>
-
-</div>
-
-  <div class = "col-md-6 no-gutters">
-    <div class = "smSide">
-      <div class = "videoText">
-      I would love to learn more about Social Media Marketing.I currently run a "professional" fan account both on Instagram and Twitter.
-           <br></br>
-      <a href="https://twitter.com/louiesforlouis" style="color:#b800c2">@LouiesforLouis </a>
-
-      <br></br>
-
-      <a href="https://twitter.com/nialltournews"style="color:#b800c2">@NiallTourNews </a>
-      <br></br>
-
-       <a href="https://www.instagram.com/snoopdoggharry/"style="color:#b800c2">@Snoopdoggharry </a></div>
-         <br></br>
-         <br></br>
-
-      <p style="text-align: center">Scroll down to see projects I've done on these accounts!</p>
-      
-  </div>
-  </div>
-</div>
-
-
-
-
-<div class="row no-gutters">
-  <div class = "col-md-6 no-gutters">
-    <div class="smSide">
-      <div class = "videoText"> #LouiesAtHome
-
-         <video autoplay loop muted width="100%">
-        <source src="videos/world.mp4" type="video/mp4"></video></div>
-          <p style="text-align: center;padding: 10px">In April 2020, I helped organize the #LouiesAtHome project. Each day we would encourage people to share their baking schools or makeup skills etc. We did this to try and give people something to do while staying safe at home.</p>
-      </div>
-  </div>
-
-
-  <div class = "col-md-6 no-gutters">
-    <div class = "smSide">
-      <div class = "embed-twitter">
-     <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It’s so great that <a href="https://twitter.com/hashtag/LouisTomlinson?src=hash&amp;ref_src=twsrc%5Etfw">#LouisTomlinson</a> has been checking on his fans so regularly! How awesome is for that, <a href="https://twitter.com/hashtag/Louies?src=hash&amp;ref_src=twsrc%5Etfw">#Louies</a>?! Especially since now is the time when <a href="https://twitter.com/hashtag/LouiesAtHome?src=hash&amp;ref_src=twsrc%5Etfw">#LouiesAtHome</a> may need him most! Thank you <a href="https://twitter.com/Louis_Tomlinson?ref_src=twsrc%5Etfw">@Louis_Tomlinson</a>! <a href="https://t.co/stlqXqjkcr">pic.twitter.com/stlqXqjkcr</a></p>&mdash; ZakkOnAir (@ZakkOnAir) <a href="https://twitter.com/ZakkOnAir/status/1246205559449231361?ref_src=twsrc%5Etfw">April 3, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-     
-</div>
-</div>
-</div>
-
-<div class="row no-gutters">
-  <div class = "col-md-6 no-gutters">
-    <div class="smSide">
-      <div class = "videoText">#WallsOlympics</div>
-        <br></br>
-        <img style="width:50%; height:75%; margin-left: 30%" src="walls.jpg">
-            
-      </div>
-  </div>
-
-
-  <div class = "col-md-6 no-gutters">
-    <div class = "smSide">
-      <div class = "imageCenter">
-        <br></br>
-        <br></br>
-
-          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">UPDATE || Team B Side is trending #7 worldwide without the hashtag! Wow! <a href="https://twitter.com/hashtag/WallsOlympics?src=hash&amp;ref_src=twsrc%5Etfw">#WallsOlympics</a> <a href="https://t.co/5FI1IzfTGp">pic.twitter.com/5FI1IzfTGp</a></p>&mdash; Louies for Louis (@louiesforlouis) <a href="https://twitter.com/louiesforlouis/status/1250592747695812608?ref_src=twsrc%5Etfw">April 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          <p style="text-align: center;padding: 10px;background-color: white;"> Multiple twitter pages teamed up to deliver the #WallsOlympics project. We even got the hashtag trending <a href="https://997now.com/trending/louis-tomlinson-fans-host-the-wallsolympics/">worldwide!</a></p>
-
-      </div>
-    </div>
-</div>
-</div>
-
-
-
-<div class="row no-gutters">
-  <div class = "col-md-6 no-gutters">
-    <div class="smSide">
-            <div class="videoText">
-            Over quarantine, I reached out to artists online and asked them to send in a clip of themselves singing part of the pop hit "Watermelon Sugar" by Harry Styles. <br> </br> <iframe width="560" height="315" src="https://www.youtube.com/embed/5JTKLIvU_Bo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      </div>
-  </div>
-
-
-  <div class = "col-md-6 no-gutters">
-    <div class = "smSide">
-      <div class = "embed-twitter">
-     <blockquote class="twitter-tweet"><p lang="en" dir="ltr">⚡️ NIALL MERCH GIVEAWAY ⚡️<br><br>We have partnered up with Vibe Tickets to giveaway £50 worth of <a href="https://twitter.com/NiallOfficial?ref_src=twsrc%5Etfw">@NiallOfficial</a> merch!<br><br>To enter:<br>- RT this tweet<br>- Follow <a href="https://twitter.com/VibeTickets?ref_src=twsrc%5Etfw">@VibeTickets</a>, <a href="https://twitter.com/VibePay?ref_src=twsrc%5Etfw">@VibePay</a> and us<br><br>This is an international giveaway and ends on May 28th 5PM (UK). Good luck! <a href="https://t.co/cHDkxx0X2F">pic.twitter.com/cHDkxx0X2F</a></p>&mdash; Niall Horan Updates (@NiallTourNews) <a href="https://twitter.com/NiallTourNews/status/1263500262230106115?ref_src=twsrc%5Etfw">May 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-     
-</div>
-</div>
-
-<div class="row no-gutters">
-  <div class = "col-md-6 no-gutters">
-    <div class="lastSide">
-      <p style="text-align: center;padding: 5px;"> I was able to raise enough money through donations to giveaway a pair of tickets via my Instagram page! You can also watch my <a href ="https://www.instagram.com/p/B6vfUqyH7cN/?igshid=pqtt1z76lyoa" style="color: purple;">Boyband of the Decade</a> and <a href ="https://www.youtube.com/watch?v=X6zPdkylll8"style="color: purple;">"Three Years of SOTT" video.  </a></p>
-      <div class ="videoText2">
-          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/B9XO1ugn-ex/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-      <div style="padding:16px;"> <a href="https://www.instagram.com/p/B9XO1ugn-ex/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
-         <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
-         <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
-           <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div>
-           <div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div></a> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/B9XO1ugn-ex/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">ALRIGHTYY Thank you to all those who shared/donated ❤️ Enough money was raised to give ONE fan a PAIR of tickets to a show of their choice on the second slide. So the seats are in the 300s / far section but it will be an amazing experience wherever you are!! TO ENTER : Comment / tag the person you would bring if you won the tickets DM me the show you would choose to go to if you win Like this post!! (Must do all three ! I will be checking ) Feel free to share so more people are aware of this 💖 (Transportation is not included in the giveaway, you must be able to get to the venue yourself)</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/snoopdoggharry/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> n i c o l e ╰(*´︶`*)╯♡</a> (@snoopdoggharry) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2020-03-05T19:03:29+00:00">Mar 5, 2020 at 11:03am PST</time></p></div></blockquote> <script async src="//www.instagram.com/embed.js">
-           </script></div>
-    </div>
-
-</div>
-
-  <div class = "col-md-6 no-gutters">
-    <div class = "lastSide">
-      <div class ="videoText">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/X6zPdkylll8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <br></br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DKsadI-VXJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      
-
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="row no-gutters">
-  <div class = "col-md-6 no-gutters">
-    <div class ="leftSide3">
-  <br></br>
-          <a href="https://ngarcian.github.io/genandrade/" target="_blank">
-          <img style="height:35%; width:50%;" class="imageCenter" border="0" alt="Art Page" src="gen.png">
-          </a>
-          <div class = "designText">A website to showcase art by Genesis Andrade </div>
-          <br></br>
-        <a href="https://nicolegarcia3.tumblr.com/tagged/design" target="_blank">
-      <img style="height:30%; width:40%;" class="imageCenter" border="0" alt="W3Schools" src="tum.png"></a>
-      <div class = "designText"> My tumblr page </div>
-  </div>
-</div>
-
-
-
- <div class = "col-md-6 no-gutters">
-    <div class ="rightSide">
-      <div class ="videoText">
-        <b>Here are some examples of graphics I've made</b>
-      </div>
-
-<div class="gridCenter">
-  <div class="imageRow"> 
-    <div class="imageColumn">
-      <img src= "design/design.JPG" style="height:50%;width:140%;">
-      <img src= "design/design3.png" style="height:45%;width:150%;">
-    </div>
-    <div class="imageColumn">
-      <br></br>
-      <img src= "design/design4.png" style="height:45%;width:152%;margin-left:55%;">
-      <img src= "design/design5.JPG" style="height:45%;width:150%;margin-left:55%;">
-    </div>  
-  </div>
-</div>
-       
-  </div>
-</div>
-
-
-
+    <script src="index.js" type="text/javascript"></script>
 </body>
 </html>
