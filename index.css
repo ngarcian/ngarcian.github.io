@@ -178,6 +178,11 @@ header table {
     border-bottom:4px solid rgb(110, 24, 0);
     width:6%;
 }
+#work h2 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(110, 24, 0);
+    width:25%;
+}
 #photos {
     width:100%;
     columns:3;
