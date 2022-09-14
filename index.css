@@ -303,6 +303,24 @@ header table {
     padding:6vh 4vw;
     font-weight:bold;
 }
+
+#social {
+    width:92vw;
+    padding:6vh 4vw;
+    font-weight:bold;
+}
+
+#social h1 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(110, 24, 0);
+    width:6%;
+}
+#social h2 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(110, 24, 0);
+    width:25%;
+}
+
 #work h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(110, 24, 0);
