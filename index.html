@@ -347,6 +347,24 @@ window.onclick = function(e) {
   }
 }
 
+ const video = document.querySelector('.hero-img');
+  if (!video) {
+    console.log("No video element found!");
+  } else {
+    video.addEventListener('loadedmetadata', () => {
+      console.log("Video loaded successfully!");
+      console.log("Duration (seconds):", video.duration);
+      console.log("Video dimensions:", video.videoWidth, "x", video.videoHeight);
+    });
+
+    video.addEventListener('error', (e) => {
+      console.error("Video failed to load!", e);
+      if (video.src) {
+        console.log("Tried to load:", video.src);
+      }
+    });
+  }
+
 </script>
 
 </body>
