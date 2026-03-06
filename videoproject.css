@@ -672,24 +672,24 @@ color: black;
   object-fit: cover;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%);
   transform-origin: center center;
 }
 
-    .expand-section img {
-      position: absolute;
-      width: 100vw;
-      /* fill viewport width */
-      height: 100vh;
-      /* fill viewport height */
-      object-fit: cover;
-      /* ensures no empty space */
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0.5);
-      /* start smaller */
-      transform-origin: center center;
-    }
+.expand-section video {
+  animation: expand 1.2s ease-out forwards;
+}
+
+@keyframes expand {
+  from {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+ 
 
  .project-section {
         max-width: 1400px;
@@ -709,6 +709,20 @@ color: black;
 	padding: 100px 150px 10px 150px;
     }
 
+    .project-section video {
+        width: 510px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+
+  .firstproject-section video {
+         width: 510px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+
     .project-section img {
         width: 510px;
         height: auto;
@@ -716,21 +730,13 @@ color: black;
         border-radius: 3px;
     }
 
-.project-video,
-.firstproject-video {
-  width: 510px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 3px;
-  display: block;
-}
-
   .firstproject-section img {
          width: 510px;
         height: auto;
         object-fit: cover;
         border-radius: 3px;
     }
+
 
 
     .text-block {
