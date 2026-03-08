@@ -294,12 +294,13 @@ Directed live broadcasts, maintained a tight show clock, hit sound cues, and ens
   <a href="https://www.youtube.com/watch?v=9BkW22NiiOs&t=22s" target="_blank">
     <div class="expand-media">
       <video autoplay loop muted playsinline>
-  <source src="videos/pr_doc.mp4" type="video/mp4" />
-</video>
+        <source src="https://github.com/ngarcian/ngarcian.github.io/raw/refs/heads/master/videos/pr_doc.mp4" type="video/mp4" />
+      </video>
     </div>
   </a>
 </div>
 
+<script src="expand.js"></script>
 
 
 <div class="firstproject-section">
@@ -573,20 +574,6 @@ if (section) {
   }
 }
 
-/* ------------------ EXPAND SECTION GIF SCALE ------------------ */
-const expandSection = document.querySelector(".expand-section");
-if (expandSection) {
-  gsap.to(".expand-section img", {
-    scrollTrigger: {
-      trigger: ".expand-section",
-     start: "top bottom",
-    end: "bottom center",
-      scrub: 3
-    },
-    scale: 1,
-    ease: "power4.inOut"
-  });
-}
 
 /* ------------------ HOVER GIF ------------------ */
 document.querySelectorAll('.hover-gif').forEach(img => {
@@ -657,6 +644,17 @@ window.onclick = function(e) {
   }
 }
 
+const video = document.querySelector(".expand-section video");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      video.classList.add("expanded");
+    }
+  });
+}, { threshold: 0.4 }); // triggers when 40% is visible
+
+observer.observe(video);
 </script>
 
 </body>

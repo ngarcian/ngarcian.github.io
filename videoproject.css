@@ -660,11 +660,12 @@ color: black;
 }
 
 .expand-section {
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
 
-    }
+/* Start small */
 .expand-section video {
   position: absolute;
   width: 100vw;
@@ -672,24 +673,15 @@ color: black;
   object-fit: cover;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.5);
   transform-origin: center center;
+  transition: transform 1.2s ease-out;
 }
 
-.expand-section video {
-  animation: expand 1.2s ease-out forwards;
+/* Expand when JS adds this class */
+.expand-section video.expanded {
+  transform: translate(-50%, -50%) scale(1);
 }
-
-@keyframes expand {
-  from {
-    transform: translate(-50%, -50%) scale(0.5);
-  }
-  to {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
- 
 
  .project-section {
         max-width: 1400px;
