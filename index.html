@@ -251,7 +251,7 @@ Directed live broadcasts, maintained a tight show clock, hit sound cues, and ens
   <div class="scroll-wrapper">
 
     <div class="item">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/2560px-CNN.svg.png" alt=""loading="lazy">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Cnn_logo_red_background.png" alt=""loading="lazy">
       <p>
         News Marketing Solutions Intern | Assisted in integrated marketing programs designed to drive advertiser revenue for CNN. I also developed and presented social media marketing strategies to <b>boost brand visibility</b> and engagement, including concepts such as sponsored news quizzes on <b>CNN’s Instagram stories</b>.
       </p>
@@ -276,18 +276,6 @@ Directed live broadcasts, maintained a tight show clock, hit sound cues, and ens
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   <section id="projects">
 
 <div class="expand-section">
@@ -307,7 +295,7 @@ Directed live broadcasts, maintained a tight show clock, hit sound cues, and ens
 <a href="https://drive.google.com/file/d/1MQKqSRXhmLRkfri5BuLz11wAHv9wYGsL/view?usp=sharing" target="_blank">
 
 <video autoplay loop muted playsinline>
-  <source src="videos/gala2.mp4" type="video/mp4" />
+  <source src="https://github.com/ngarcian/ngarcian.github.io/raw/refs/heads/master/videos/gala2.mp4" type="video/mp4" />
 </video></a>
 
     <div class="firsttext-block fade-in">
@@ -322,7 +310,7 @@ Directed live broadcasts, maintained a tight show clock, hit sound cues, and ens
 
 <div class="project-section">
 <video autoplay loop muted playsinline>
-  <source src="videos/fan1.mp4" type="video/mp4" />
+  <source src="https://github.com/ngarcian/ngarcian.github.io/raw/refs/heads/master/videos/fan1.mp4" type="video/mp4" />
 </video>
     <div class="text-block fade-in">
         <span class="label">FAN ENGAGEMENT:</span>
@@ -553,25 +541,25 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ------------------ HORIZONTAL SCROLL ------------------ */
-const section = document.querySelector(".horizontal-section");
-if (section) {
-  const scrollWrapper = section.querySelector(".scroll-wrapper");
-  if (scrollWrapper) {
-  const totalScroll = Math.max(0, scrollWrapper.scrollWidth - window.innerWidth);
 
-    gsap.to(scrollWrapper, {
-      x: -totalScroll,
-      ease: "none",
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => `+=${scrollWrapper.scrollWidth}`,
-        scrub: true,
-        pin: true,
-        anticipatePin: 1
-      }
-    });
-  }
+const horizontalSection = document.querySelector(".horizontal-section");
+
+if (horizontalSection) {
+
+  const container = horizontalSection.querySelector(".scroll-wrapper");
+  const panels = gsap.utils.toArray(".item");
+
+  gsap.to(panels, {
+    xPercent: -100 * (panels.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: horizontalSection,
+      pin: true,
+      scrub: true,   // ties movement directly to scroll
+      end: () => "+=" + container.offsetWidth
+    }
+  });
+
 }
 
 

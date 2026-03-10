@@ -12,9 +12,6 @@ text-align: center; /* base center */
 
     }
 
-body {
-overflow-x: hidden;
-}
 
 
 .fade-in {
@@ -622,42 +619,47 @@ color: black;
 
 
 
-  /* HORIZONTAL */
+ /* HORIZONTAL SECTION */
 
 .horizontal-section {
+  position: relative;
   height: 100vh;
-  width: 100%;
   overflow: hidden;
 }
 
 .scroll-wrapper {
   display: flex;
   height: 100vh;
-  align-items: center; /* vertically centers each item */
+  will-change: transform;
+
 }
 
 .item {
+  flex: 0 0 100vw; /* each item = full screen */
   display: flex;
-  align-items: center;  /* centers image + text on same line */
-  gap: 3rem;            /* space between image and text */
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
   padding: 0 8vw;
-  flex-shrink: 0;
 }
 
 .item img {
-  height: 50vh;
+  height: 45vh;
   width: auto;
   object-fit: contain;
-  transition: transform 0.3s ease;
 }
 
 .item p {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   color: #a6051a;
-  max-width: 800px;
+  max-width: 700px;
   line-height: 1.6;
 }
+
+
+
+
 
 .expand-section {
   height: 100vh;
