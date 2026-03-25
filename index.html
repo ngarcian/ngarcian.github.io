@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Nicole Garcia</title>
   <link rel="stylesheet" href="videoproject.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="favicon.png">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Sirivennela&display=swap');
@@ -546,9 +547,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
 /* ------------------ HORIZONTAL SCROLL ------------------ */
 
-const horizontalSection = document.querySelector(".horizontal-section");
 
-if (horizontalSection) {
+gsap.matchMedia().add("(min-width: 901px)", () => {
+
+  const horizontalSection = document.querySelector(".horizontal-section");
+
+  if (!horizontalSection) return;
 
   const container = horizontalSection.querySelector(".scroll-wrapper");
   const panels = gsap.utils.toArray(".item");
@@ -559,12 +563,12 @@ if (horizontalSection) {
     scrollTrigger: {
       trigger: horizontalSection,
       pin: true,
-      scrub: true,   // ties movement directly to scroll
+      scrub: true,
       end: () => "+=" + container.offsetWidth
     }
   });
 
-}
+});
 
 
 /* ------------------ HOVER GIF ------------------ */

@@ -1,16 +1,18 @@
- body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-text-align: center; /* base center */
-     font-family: 'Playfair Display', serif;
-      background: #FDF7E9; /* Old Lace */
-      color: #212121; /* Mine Shaft */
-  position: relative;
-    
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  background: #FDF7E9;
+  color: #212121;
+}
 
-
-    }
+/* universal sizing */
+* {
+  box-sizing: border-box;
+}
 
 
 
@@ -30,25 +32,33 @@ h1 a {
   color: inherit;
 }
 
-   section.landing {
-  height: 100vh;
-  min-height: 100vh;
+section.landing {
+  min-height: 60vh;              
+  padding: 8vh 5% 6vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;   /* move content to the top */
+  justify-content: flex-start;
   align-items: center;
   background: #FDF7E9;
   text-align: center;
-  padding-bottom: 34px;
   position: relative;
   z-index: 5;
-font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
+}
 
+@media (max-width: 768px){
+
+section.landing{
+min-height: auto;   /* let content decide height */
+padding: 60px 20px 30px;
+}
 
 }
+
+
     section.landing h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 4rem;
+       font-size: clamp(1.8rem, 4vw, 2.5rem);
       margin: 0;
     }
     section.landing p {
@@ -62,15 +72,14 @@ font-weight:700;
     /* --- Panels --- */
     section.panel {
       position: relative;
-       min-height: 100vh;
+       min-height:auto;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
 text-decoration:none;
   z-index: 1;
-
-padding: 10%;
+  padding: 60px 5%;
 
     }
 
@@ -91,7 +100,7 @@ max-width: 700px;
 }
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
       margin: 0;
       color: #a6051a; /* red */
 text-decoration:none;
@@ -100,7 +109,7 @@ text-align: center;
 
   h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.7rem;
+      font-size: clamp(1.4rem, 3vw, 2rem);
  font-weight: 500;
       margin: 0;
       color: #a6051a; /* red */
@@ -143,11 +152,34 @@ text-align: center;
   border-bottom: 1px solid currentColor;
   opacity: 0.8;
 }
+
+@media (max-width:768px){
+
+.view-more{
+position:static;
+display:block;
+margin-top:8px;
+}
+
+}
 .hero-img {
-      max-width: 60%;
+      width:80%;
+     max-width: 900px; 
       transform: scale(1);
-     padding-top:75px;
-    }
+     margin:40px auto 0;
+   display:block;
+
+}
+
+
+@media (max-width:768px){
+
+.hero-img{
+width:85vw;
+max-width:420px;
+}
+
+}
 
     .overlay {
       position: absolute;
@@ -224,35 +256,6 @@ text-align: center;
 transform: rotate(15deg);
 }
 
-
-
-/* LICENSE CARD */
-.license-card {
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  background: #fff;
-  padding: 20px 25px;
-  width: 260px;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  font-size: 0.9rem;
-}
-
-.license-card h3 {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-.stamp {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #d62828;
-  border: 2px solid #d62828;
-  padding: 4px 8px;
-  display: inline-block;
-  border-radius: 4px;
-}
 
 
 /* RESET */
@@ -474,7 +477,8 @@ font-family: "Sirivennela", sans-serif;
   background: #000;
   border-radius: 40px;
   padding: 12px;
-  width: 230px;
+  width: 40vw;
+  max-width:230px;
   height: 460px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   overflow: hidden;
@@ -517,6 +521,19 @@ font-family: "Sirivennela", sans-serif;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 768px){
+
+.phones{
+gap:1.5rem;
+}
+
+.phone{
+width:180px;
+height:360px;
+}
+
 }
 
 .segment {
@@ -658,8 +675,33 @@ color: black;
 }
 
 
+@media (max-width: 768px){
 
+.horizontal-section{
+height:auto;
+}
 
+.scroll-wrapper{
+flex-direction:column;
+height:auto;
+}
+
+.item{
+flex-direction:column;
+gap:30px;
+padding:40px 20px;
+}
+
+.item img{
+height:auto;
+max-width:200px;
+}
+
+.item p{
+font-size:1.1rem;
+}
+
+}
 
 .expand-section {
   height: 100vh;
@@ -667,9 +709,8 @@ color: black;
   overflow: hidden;
 }
 
-/* Start small */
-.expand-section video {
-  position: absolute;
+.expand-section video{
+ position: absolute;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -685,13 +726,36 @@ color: black;
   transform: translate(-50%, -50%) scale(1);
 }
 
+
+@media (max-width:768px){
+
+.expand-section{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:40px 20px;
+text-align:center;
+}
+
+.expand-section video{
+display:block;
+width:90%;
+max-width:420px;
+height:auto;
+margin:0 auto;
+transform:none;   /* disables desktop zoom start */
+}
+
+}
+
  .project-section {
         max-width: 1400px;
         margin: 0 auto 140px;
         display: flex;
         align-items: flex-start;
         gap: 80px;
-        padding: 0 150px;
+        padding: 0 5%;
     }
 
  .firstproject-section {
@@ -700,7 +764,7 @@ color: black;
         display: flex;
         align-items: flex-start;
         gap: 80px;
-	padding: 100px 150px 10px 150px;
+	padding: 80px 5% 20px;
     }
 
     .project-section video {
@@ -711,7 +775,7 @@ color: black;
     }
 
   .firstproject-section video {
-         width: 510px;
+         width: 960px;
         height: auto;
         object-fit: cover;
         border-radius: 3px;
@@ -731,6 +795,17 @@ color: black;
         border-radius: 3px;
     }
 
+
+@media (max-width: 768px) {
+
+.project-section,
+.firstproject-section{
+padding: 0 24px;
+gap: 30px;
+margin-bottom: 80px;
+}
+
+}
 
 
     .text-block {
@@ -864,7 +939,8 @@ text-align:center;
 
 /* Image styling */
 .webdesign-gallery img {
-  width: 420px;
+   width: 90%;
+  max-width: 420px;
   border-radius: 6px;
   display: block;
   margin: 0 auto;
@@ -922,3 +998,43 @@ text-align:center;
   color: #b11217;
 }
 
+
+@media (max-width:768px){
+
+.nav-inner{
+padding:16px 20px;
+}
+
+.mobile-menu{
+padding:20px;
+}
+
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width:768px){
+
+.signature-wrapper{
+grid-template-columns: 1fr;
+gap:40px;
+text-align:center;
+}
+
+}
+
+@media (max-width:900px){
+
+.project-section,
+.firstproject-section{
+flex-direction: column;
+align-items: center;
+gap:40px;
+padding:0 5%;
+}
+
+}
